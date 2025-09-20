@@ -3,69 +3,7 @@ Metodos para encontrar un elemento dentro de una estructura en memoria puede
 ser arrays, listas o vectores. Diferenciandose por si el arreglo esta ordenado
 o no y por complejidad cada uno de estos importate depende del tipo de situacion
 
-Busqueda lineal:sirve para en listas/desordenadas,revisa uno a uno hasta
-encontrar o terminar
-Complejidad O(n)
-
-EJEMPLO JAVA:
-public class Buscador {
-    public static int Buscador(int[] arr, int key) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == key) {
-                return i; // Devuelve la posición donde encontró el valor
-            }
-        }
-        return -1; // Si no se encontró
-    }
-    public static void main(String[] args) {
-        int[] data = {12, 34, 7, 90, 11};
-        int key = 11;
-
-        int result = Buscador(data, key);
-        if (result == -1) {
-            System.out.println("Elemento no encontrado");
-        } else {
-            System.out.println("Elemento encontrado en la posición: " 
-+ result + " elemento buscado: "+ key);
-        }
-    }  
-}
-
-//sive para todo tipo pero demora mas supongo
-
-Buscador Binarios: Requisito para que funcione arreglo ordenado,Complejidad O(log n)
-
-EJEMPLO JAVA:
-public class BuscadorBinary {
-    public static int BuscadorBinary(int[] arr, int key) {
-        int low = 0;
-        int high = arr.length - 1;
-        while (low <= high) {
-            int mid = (low + high) / 2;
-            if (arr[mid] == key) {
-                return mid; // Encontrado
-            } else if (arr[mid] < key) {
-                low = mid + 1; // Buscar en la mitad derecha
-            } else {
-                high = mid - 1; // Buscar en la mitad izquierda
-            }
-        }
-        return -1; // No encontrado
-    }
-    public static void main(String[] args) {
-        int[] data = {7, 11, 12, 25, 34, 90}; // IMPORTANTE: debe estar ordenado
-        int key = 34;
-        int result = BuscadorBinary(data, key);
-        if (result == -1) {
-            System.out.println("Elemento no encontrado");
-        } else {
-            System.out.println("Elemento encontrado en la posición: " + result);
-        }
-    }
-}
-
-
-//Es mucho mas rapido pero el arreglo debe de estar ordenado
-
-
-
+Lineal: O(n), sirve en cualquier arreglo.
+Binaria: O(log n), requiere ordenado.
+Interpolación: O(log log n) promedio si datos uniformes.
+Jump: O(√n), balance entre saltos y búsqueda lineal.
