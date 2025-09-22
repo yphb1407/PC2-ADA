@@ -1,4 +1,3 @@
-
 public class BuscadorBinary {
     public static int BuscadorBinary(int[] arr, int key) {
         int low = 0;
