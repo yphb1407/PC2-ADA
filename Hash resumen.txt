@@ -1,0 +1,36 @@
+Hashing
+tranforma un valor(llaves) a un numero
+representando un indice.
+
+Complejidad:
+caso normal o(n)
+mejor o(log n)
+
+conviete la llave en un indice en la funcion hash
+haciendo el acceso sea mas eficiente y seguro entonces
+se vuelve constante o(1) 
+
+supongamos que tenemos un conjuto de strings 
+entonces al pasarlos por la funcion hash 
+se conviernten en numeros y los almacena segun 
+el contexto del problema
+
+Problemas en el hashing
+colisiones: tener enl mismo valor o numero generado 
+por 2 indices similares el el mismo guardado
+
+la solucion de esto puede ser el Chaning(tratar cada
+casilla de la hash como una lista enlazada) como se usa
+una lista enlazada(si 2 elemntos colisionan simplemente
+los almaenamos en la misma casilla)y las tuplas
+guardar como llave valor
+
+closed hashing en lugar de guardar elementos colisionados 
+en una lista enlazada encontrar una nueva casiilla libre
+pude ser por sondeo lineal o cuadratico ayudando a dispersar
+los elemetos tabien llamado double hashing teneindo un tiempo
+de ejecucion mayor depende del espacio que ocupen los datos
+
+
+
+ 
