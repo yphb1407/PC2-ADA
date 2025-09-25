@@ -1,0 +1,59 @@
+import java.util.HashMap;
+
+public class EjemploHashMap {
+    public static void main(String[] args) {
+        // Creamos un HashMap que asocia Persona con un número de teléfono
+        HashMap<Persona, String> agenda = new HashMap<>();
+
+        Persona p1 = new Persona("Juan", 25);
+        Persona p2 = new Persona("Ana", 30);
+        Persona p3 = new Persona("Juan", 25); // igual a p1 (mismos datos)
+
+        // Guardamos en el HashMap
+        agenda.put(p1, "999-111-222");
+        agenda.put(p2, "988-333-444");
+
+        // Probamos si p3 (que es "igual" a p1) encuentra el mismo número
+        System.out.println("Teléfono de p1: " + agenda.get(p1));
+        System.out.println("Teléfono de p3: " + agenda.get(p3)); // debería devolver el mismo que p1
+
+        // Recorremos la agenda
+        System.out.println("\nContenido del HashMap:");
+        for (Persona p : agenda.keySet()) {
+            System.out.println(p + " -> " + agenda.get(p));
+        }
+    }
+}
+
+class Persona {
+    private String nombre;
+    private int edad;
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Sobrescribimos hashCode y equals
+    @Override
+    public int hashCode() {
+        int resultado = 17;
+        resultado = 31 * resultado + (nombre == null ? 0 : nombre.hashCode());
+        resultado = 31 * resultado + edad;
+        return resultado;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Persona otra = (Persona) obj;
+        return edad == otra.edad && 
+               (nombre != null ? nombre.equals(otra.nombre) : otra.nombre == null);
+    }
+
+    @Override
+    public String toString() {
+        return nombre + " (" + edad + ")";
+    }
+}
