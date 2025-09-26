@@ -29,7 +29,8 @@ closed hashing en lugar de guardar elementos colisionados
 en una lista enlazada encontrar una nueva casiilla libre
 pude ser por sondeo lineal o cuadratico ayudando a dispersar
 los elemetos tabien llamado double hashing teneindo un tiempo
-de ejecucion mayor depende del espacio que ocupen los datos
+de ejecucion mayor depende del espacio que ocupen los datos.
+
 
 
 
