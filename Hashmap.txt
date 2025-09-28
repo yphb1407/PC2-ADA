@@ -23,6 +23,7 @@ public class EjemploHashMap {
             System.out.println(p + " -> " + agenda.get(p));
         }
     }
+
 }
 
 class Persona {
@@ -57,3 +58,4 @@ class Persona {
         return nombre + " (" + edad + ")";
     }
 }
+
