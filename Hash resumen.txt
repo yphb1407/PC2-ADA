@@ -8,7 +8,7 @@ mejor o(log n)
 
 conviete la llave en un indice en la funcion hash
 haciendo el acceso sea mas eficiente y seguro entonces
-se vuelve constante o(1) 
+se vuelve constante o(1).
 
 supongamos que tenemos un conjuto de strings 
 entonces al pasarlos por la funcion hash 
@@ -35,3 +35,4 @@ de ejecucion mayor depende del espacio que ocupen los datos.
 
 
  
+
