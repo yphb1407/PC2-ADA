@@ -109,7 +109,7 @@ public class ClosedHashInterfaz extends JFrame {
     // Genera un número de tarjeta de 16 dígitos
     private String generarTarjeta(Random rand) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < 5; i++) {
             sb.append(rand.nextInt(10));
         }
         return sb.toString();
@@ -119,3 +119,4 @@ public class ClosedHashInterfaz extends JFrame {
         SwingUtilities.invokeLater(() -> new ClosedHashInterfaz().setVisible(true));
     }
 }
+
