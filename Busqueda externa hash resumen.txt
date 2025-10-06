@@ -1,11 +1,11 @@
 Algoridmos de ordenacion externa: fundamentales cuando los datos
 no caben en la memoria principal y deben ser gestionados en el almacenamiento externo
-como en discos duros, etc
+como en discos duros, etc.
 
 MEDIANTE BLOQUES: los datos se almacenan en bloques
 de tamaño fijo. para poder hacer una busqueda en la memoria interna
 leyendose secuencialmente uno por uno hasta llegar al final del bloque
-siendo muy lento si el dato a buscar esta en la ultima posicion
+siendo muy lento si el dato a buscar esta en la ultima posicion.
 
 
 MEDIANTE INDICES: al usar unidices los datos que contiene referencias a 
@@ -14,9 +14,9 @@ la busqueda en 2 pasos buscando primero la ubicacion del bloque que contiene el 
 y luego accediendo directamente al bloque realizandose una busqueda secuencial
 dentro del bloque, al hacer esto se reduce el numero de acceso al archivos siendo mejor
 para archivos grandes, lo malo es que requiere mas espacio y la actualizacion de
-indices es mas costosa
+indices es mas costosa.
 
 MEDIANTE CLAVES: se una un hash que conviete la clave de busqueda en una direccion.
 se aplica la funcuncion a la clave y devuelve un valor en el archivo donde se almacena
 el dato al hacer esto se accede muy rapidamente al la busqueda pero lo malo es que pude haber
-colisiones pero se pueden resolver con otros metodos
+colisiones pero se pueden resolver con otros metodos.
