@@ -1,9 +1,10 @@
 Algoritmos de busqueda interna
 Metodos para encontrar un elemento dentro de una estructura en memoria puede
 ser arrays, listas o vectores. Diferenciandose por si el arreglo esta ordenado
-o no y por complejidad cada uno de estos importate depende del tipo de situacion
+o no y por complejidad cada uno de estos importate depende del tipo de situacion.
 
 Lineal: O(n), sirve en cualquier arreglo.
 Binaria: O(log n), requiere ordenado.
 Interpolación: O(log log n) promedio si datos uniformes.
 Jump: O(√n), balance entre saltos y búsqueda lineal.
+
