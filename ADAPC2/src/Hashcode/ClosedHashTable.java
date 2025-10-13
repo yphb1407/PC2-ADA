@@ -29,7 +29,7 @@ public class ClosedHashTable {
             contador++;
 
             if (contador >= size) {
-                throw new RuntimeException("La tabla hash está llena.");
+                throw new RuntimeException("llena.");
             }
         }
         tabla[index] = new ClosedHashEntry(tarjeta, usuario);
