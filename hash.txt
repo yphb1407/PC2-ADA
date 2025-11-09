@@ -1,9 +1,15 @@
-El HashMap en Java es como un gran archivador lleno de cajones. Cada cajón corresponde a un espacio dentro de un arreglo interno, y allí es donde se guardan los pares clave–valor. Para decidir en qué cajón va cada cosa, el HashMap calcula un número especial a partir de la clave: el hash. Ese número, reducido al tamaño del archivador, indica exactamente dónde colocar el dato.
+El HashMap en Java es como un gran archivador lleno de cajones.
+Cada cajón corresponde a un espacio dentro de un arreglo interno, y
+allí es donde se guardan los pares clave–valor. Para decidir en
+qué cajón va cada cosa, el HashMap calcula un número especial
+a partir de la clave: el hash. Ese número, reducido al tamaño
+del archivador, indica exactamente dónde colocar el dato.
 
 Pero no siempre todo encaja de manera perfecta. A veces dos claves diferentes producen el mismo número y acaban en el mismo cajón. El HashMap, lejos de confundirse, utiliza una estrategia llamada separate chaining: dentro del cajón mantiene una lista de nodos, cada uno con su propia clave y valor, de modo que no importa cuántos choquen, todos tienen su lugar.
 
 Cuando alguien le pide un valor, el HashMap no da vueltas: calcula el hash de la clave, abre el cajón correspondiente y recorre la lista hasta encontrar la coincidencia. Si está, devuelve el valor; si no, responde con un “null”. Lo mismo ocurre al eliminar: busca en el cajón y quita el nodo indicado.
 
 Y como buen sistema organizado, también sabe cuándo necesita más espacio. Si se llena demasiado y los cajones empiezan a estar abarrotados, el HashMap se redimensiona: crea un archivador más grande, con más cajones, y vuelve a repartir todos los elementos. Ese proceso se llama rehashing.
+
 
 En esencia, el HashMap es un guardián del orden: rápido, eficiente y siempre preparado para crecer, garantizando que cada clave encuentre su valor sin perderse en el camino.
